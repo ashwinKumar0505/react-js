@@ -1,0 +1,35 @@
+body{
+  margin: 0;
+  line-height: 0;
+}
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #343a3f;
+  color:white;
+  font-size:20px;
+}
+.content{
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.round-clock{
+  height:300px;
+  width: 300px;
+  border-radius: 50%;
+  background-color: #292d34;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color:#60dbfb;
+  font-size: 30px;
+}
+.clock-image{
+     width:80px;
+     height: 80px;
+}
