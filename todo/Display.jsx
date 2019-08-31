@@ -2,12 +2,10 @@ import React from 'react';
 
 import delete1 from "./delete.jpg";
 
-import edit from "./edit.png";
 function Display(props){
   return(
     <div className="display">
-      <img src={edit} alt="edit"></img>
-      <h3>{props.array}</h3>
+      <h3 contentEditable="true" className="text" onKeyPress={props.keyPress}>{props.array}</h3>
       <img src={delete1} alt="delete" onClick={()=>props.click(props.index)}></img>
     </div>
   )

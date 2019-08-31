@@ -36,12 +36,18 @@ class Contents extends Component {
                   inputArray:removed
               })
     }
+    NextLineHandler=(event)=>{
+      if(event.keyCode===13||event.which===13){
+        event.preventDefault();
+        event.target.blur();
+      }
+    }
   render() { 
 
     return ( 
       <div className="contents">
       <TextField change={this.textHandler} add={this.addToArray}/>
-      {this.state.inputArray.map((input,index)=> <Display key={index} index={index} array={input} click={this.deleteHandler}/>)}
+      {this.state.inputArray.map((input,index)=> <Display key={index} index={index} array={input} click={this.deleteHandler} keyPress={this.NextLineHandler}/>)}
       </div>
      );
   }
